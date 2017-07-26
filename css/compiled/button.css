@@ -1,0 +1,32 @@
+.btn {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 0.857em;
+  text-transform: uppercase;
+  padding: 17px 34px;
+  transition: 300ms;
+  box-shadow: rgba(0,0,0,0.05) 0 0 10px 0;
+  border-radius: 100px;
+}
+.btn + .btn {
+  margin-left: 10px;
+}
+.btn:hover {
+  box-shadow: rgba(0,0,0,0.05) 0 0 15px 0;
+}
+.btn.btn-discreet {
+  background-color: white;
+  border: 1px solid rgba(0,0,13,0.05);
+  color: rgba(0,0,13,0.6);
+}
+.btn.btn-discreet:hover {
+  color: #D32F2F;
+}
+.btn.btn-primary {
+  background-color: #D32F2F;
+  border: none;
+  color: white;
+}
+.btn.btn-primary:hover {
+  background-color: #d74444;
+}

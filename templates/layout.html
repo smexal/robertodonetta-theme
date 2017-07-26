@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+{$head}
+<body class="{$bodyclass}">
+<header>
+    <section id="main-bar">
+        <a id="logo-area" href="{$home_url}">
+            <img src="{$logo}" alt="" />
+        </a>
+        <div id="main-title"><span>{$main_title}</span></div>
+        <a href="javascript://" id="menu-trigger">
+            <span class="icon"></span>
+        </a>
+    </section>
+    <section id="nav-bar">
+        <div class="navigations">
+            {$primary_navigation}
+            {$secondary_navigation}
+            {$lang_selection}
+        </div>
+    </section>
+    <div id="nav-overlay"></div>
+</header>
+<div id="top-fadeout"></div>
+<div class="content">
+    {$body}
+</div>
+</body>
+<footer>
+    <div>
+        <div class="copyright">{$footer_copyright}</div>
+    </div>
+    <div>
+        <div class="navigation">{$footer_navigation}</div>
+        <div class="webdesign">{$footer_webdesign}</div>
+    </div>
+</footer>
+
+</html>

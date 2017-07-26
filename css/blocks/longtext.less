@@ -1,0 +1,21 @@
+.long-text {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 60px 80px;
+    background-color: white;
+}
+
+.tc-container {
+    position: relative;
+
+    img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateX(20%) translateY(-10%);
+    }
+
+    img + div.long-text {
+        padding: 60px 120px 60px 80px;
+    }
+}

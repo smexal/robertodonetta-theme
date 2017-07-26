@@ -1,0 +1,17 @@
+.form-group {
+    display: flex;
+    label {
+        max-width: 120px;
+        width: 20%;
+        line-height: 40px;
+    }
+    input {
+        height: 40px;
+        border-radius: 0;
+        &:focus, &:active {
+            border-color: @color-brand;
+            box-shadow: none;
+        }
+    }
+
+}

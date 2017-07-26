@@ -1,0 +1,10 @@
+.small-teaser {
+  display: block;
+  background-color: white;
+  padding: 30px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.small-teaser:hover .rodo-arrow {
+  width: 20px;
+}

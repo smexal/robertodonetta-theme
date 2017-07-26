@@ -1,0 +1,8 @@
+.collection .wrapped {
+  max-width: 1040px;
+  padding: 60px 80px;
+  background-color: #FFF;
+}
+.collection .map .wrapped {
+  padding-top: 0;
+}

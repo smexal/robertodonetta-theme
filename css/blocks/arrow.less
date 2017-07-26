@@ -1,0 +1,28 @@
+.rodo-arrow {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 16px;
+    height: 1px;
+    background-color: @color-grey;
+    transition: 300ms;
+
+    &:after, &:before {
+        width: 8px;
+        height: 1px;
+        background-color: @color-grey;
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+    &:after {
+        transform-origin: right top;
+        transform: rotateZ(45deg);
+    }
+    &:before {
+        transform-origin: right bottom;
+        transform: rotateZ(-45deg);
+    }
+}

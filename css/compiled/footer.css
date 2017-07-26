@@ -1,0 +1,24 @@
+footer {
+  background-color: #222222;
+  position: absolute;
+  justify-content: space-between;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 60px;
+  display: flex;
+  color: rgba(255,255,255,0.4);
+  line-height: 60px;
+  padding: 0 60px;
+}
+footer * {
+  display: flex;
+}
+footer .navigation {
+  padding-right: 60px;
+  margin-right: 60px;
+  border-right: 1px solid #4C4C4C;
+}
+footer .webdesign {
+  opacity: 0.9;
+}

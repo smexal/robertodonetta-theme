@@ -1,0 +1,34 @@
+#archive-database {
+  position: relative;
+}
+#archive-database .table-editbar {
+  width: 30%;
+  position: absolute;
+  top: 0;
+  right: 100px;
+}
+#archive-database .grid {
+  margin-top: 60px;
+}
+#archive-database .grid .grid-element {
+  max-width: 200px;
+  margin: 0 20px 20px 0;
+  background-color: white;
+}
+#archive-database .grid .grid-element:nth-child(4n) {
+  margin-right: 0;
+}
+#archive-database .grid .grid-element img {
+  width: 100%;
+  max-width: 100%;
+}
+#archive-database .grid .grid-element div:not(#image_url) {
+  padding: 10px;
+  font-size: 0.9em;
+  color: #ABABAB;
+}
+#archive-database .grid .grid-element #title span {
+  color: #222222;
+  font-size: 1.225em;
+  line-height: 1.5em;
+}
