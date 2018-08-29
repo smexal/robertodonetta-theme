@@ -107,8 +107,8 @@ class RobertodonettaTheme extends Theme {
 
     public function scripts() {
         $this->addScript(CORE_WWW_ROOT."ressources/scripts/externals/jquery.js", true, 0);
-        $this->addScript(CORE_WWW_ROOT."ressources/scripts/externals/bootstrap.js", true, 1);
-        $this->addScript(CORE_WWW_ROOT."ressources/scripts/helpers.js", true, 2);
+        $this->addScript(CORE_WWW_ROOT."ressources/scripts/externals/bootstrap.js", true);
+        $this->addScript(CORE_WWW_ROOT."ressources/scripts/helpers.js", true);
 
         $this->addScript($this->url(). '/scripts/navigation.js', true);
     }
