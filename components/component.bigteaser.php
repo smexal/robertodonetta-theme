@@ -42,7 +42,9 @@ class BigteaserComponent extends Component {
                 "hint" => '',
                 "key" => "main_button_link",
                 "type" => "select",
-                "values" => ContentNavigation::getPossibleItems()
+                "values" => ContentNavigation::getPossibleItems(),
+                "grouped" => true,
+                "chosen" => true
             ],
             [
                 "label" => i('Secondary Button Text', 'rodo-theme'),
@@ -55,29 +57,15 @@ class BigteaserComponent extends Component {
                 "hint" => '',
                 "key" => "secondary_button_link",
                 "type" => "select",
-                "values" => ContentNavigation::getPossibleItems()
+                "values" => ContentNavigation::getPossibleItems(),
+                "grouped" => true,
+                "chosen" => true
             ],
             [
-                "label" => i('Image One', 'rodo-theme'),
+                "label" => i('Big Image', 'rodo-theme'),
                 "hint" => '',
-                "key" => "image_one",
+                "key" => "image",
                 "type" => "image"
-            ],
-            [
-                "label" => i('Image Two', 'rodo-theme'),
-                "hint" => '',
-                "key" => "image_two",
-                "type" => "image"
-            ],
-            [
-                "label" => i('Layout Type', 'rodo-theme'),
-                "hint" => '',
-                "key" => "layout_type",
-                "type" => "select",
-                "values" => [
-                    'type_one' => i('Type #1 - Text on the left, images on the right.', 'rodo-theme'),
-                    'type_two' => i('Type #2 - Text in the center, images left and right.', 'rodo-theme')
-                ]
             ]
         ];
         return array(
@@ -90,13 +78,10 @@ class BigteaserComponent extends Component {
         );
     }
     public function content() {
-        $imgOne = new Media($this->getField('image_one'));
-        $imgOne = $imgOne->getUrl(true);
-        $imgTwo = new Media($this->getField('image_two'));
-        $imgTwo = $imgTwo->getUrl(true);
+        $image = new Media($this->getField('image'));
+        $image = $image->getUrl(true);
 
         return App::instance()->render(App::instance()->tm->theme->directory()."templates/components/", "bigteaser", [
-            'layout_type' => $this->getField('layout_type'),
             'title' => $this->getField('title'),
             'lead' => $this->getField('lead'),
             'text' => $this->getField('main_text'),
@@ -104,8 +89,7 @@ class BigteaserComponent extends Component {
             'btn_url_one' => ContentNavigation::parseHashUrl($this->getField('main_button_link')),
             'btn_text_two' => $this->getField('secondary_button_text'),
             'btn_url_two' => ContentNavigation::parseHashUrl($this->getField('secondary_button_link')),
-            'image_one' => $imgOne,
-            'image_two' => $imgTwo
+            'image' => $image
         ]);
     }
     public function customBuilderContent() {

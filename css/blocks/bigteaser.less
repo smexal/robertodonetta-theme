@@ -1,36 +1,15 @@
 .big-teaser {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 180px;
+    padding-top: 180px;
 
-    div[class^="image_"] {
-        transition: 300ms;
-        &:hover {
-            z-index: 1000 !important;
-            transform: scale(1.1);
-            box-shadow: rgba(0, 0, 0, 0.2) 0 0 100px 0;
-        }
-    }
-
-    &.type_two {
-        .text-block {
-            margin: 0 auto;
-        }
-
-        .image_one {
-            width: 574px;
-            height: 344px;
-            left: 0;
-            top: -30px;
-            bottom: auto;
-        }
-
-        .image_two {
-            width: 350px;
-            height: 411px;
-            right: 0;
-            bottom: -30px;
-            top: auto;
-        }
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
     }
 
     .text-block {
@@ -40,26 +19,11 @@
         max-width: 670px;
         position: relative;
         z-index: 4;
+        position: relative;
+        bottom: -80px;
 
         h2 {
             margin-top: 0;
         }
-    }
-
-    .image_one {
-        width: 350px;
-        height: 410px;
-        z-index: 2;
-        position: absolute;
-        right: 270px;
-        bottom: -50px;
-    }
-    .image_two {
-        width: 574px;
-        height: 343px;
-        position: absolute;
-        right: 0;
-        top: -30px;
-        z-index: 1;
     }
 }

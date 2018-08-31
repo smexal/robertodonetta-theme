@@ -9,6 +9,7 @@
     align-items: center;
     top: 0;
     left: 0;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.21);
 
     #logo-area {
         background-color: @color-brand;
@@ -83,6 +84,74 @@
         }
     }
 }
+
+section#search {
+    position: fixed;
+    top:0;
+    right: 0;
+    height: 70px;
+    width: 90px;
+    background-color: white;
+    z-index: 10;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.21);
+
+    &:hover {
+        #icon {
+            transform: rotate(-90deg);
+        }
+
+        #panel {
+            right: 90px;
+        }
+    }
+
+    #panel {
+        height: 70px;
+        background-color: white;
+        z-index: 9;
+        position: absolute;
+        width: 290px;
+        transition: 200ms;
+        right: -290px;
+        box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.21);
+
+        input {
+            height: 50px;
+            line-height: 50px;
+            border:none;
+            margin: 10px 20px;
+            width: 270px;
+            font-size: 14px;
+        }
+    }
+
+    #icon {
+        border: 1px solid @color-grey;
+        border-radius: 21px;
+        z-index: 10;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -12px;
+        margin-left: -8px;
+        transition: 180ms;
+
+        &:before {
+            width: 1px;
+            height: 9px;
+            display: block;
+            content: '';
+            background-color: @color-grey;
+            position: absolute;
+            bottom: -5px;
+            left: -2px;
+            transform: rotate(45deg);
+        }
+    }
+}
+
 body.nav-open #nav-overlay {
     display: block;
     animation: overlayFadeIn 300ms normal forwards;
@@ -170,7 +239,7 @@ body.nav-open #main-bar #menu-trigger {
         }
     }
 }
-
+/*
 #top-fadeout {
     height: 100px;
     position: fixed;
@@ -183,3 +252,4 @@ body.nav-open #main-bar #menu-trigger {
     background: -webkit-linear-gradient(top, rgba(248,248,248,1) 0%,rgba(248,248,248,0.8) 50%,rgba(248,248,248,0) 100%);
     background: linear-gradient(to bottom, rgba(248,248,248,1) 0%,rgba(248,248,248,0.8) 50%,rgba(248,248,248,0) 100%);
 }
+*/

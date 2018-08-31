@@ -4,6 +4,13 @@ var navigation = {
 
     init : function() {
         this.triggers();
+        this.searchHover();
+    },
+
+    searchHover : function() {
+        $("section#search").hover(function() {
+            $(this).find("input#global_search").focus();
+        });
     },
 
     triggers : function() {
