@@ -1,9 +1,17 @@
 .small-teaser {
   display: block;
   background-color: white;
-  padding: 30px;
   position: relative;
   margin-bottom: 30px;
+  padding-bottom: 40px;
+}
+.small-teaser img {
+  margin-bottom: 20px;
+}
+.small-teaser h3,
+.small-teaser p {
+  margin-left: 30px;
+  margin-right: 30px;
 }
 .small-teaser:hover .rodo-arrow {
   width: 20px;
