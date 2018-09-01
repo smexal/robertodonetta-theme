@@ -115,6 +115,28 @@ section#search {
         right: -290px;
         box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.21);
 
+        .results {
+            margin-top: 0;
+            background-color: white;
+            padding: 0 20px 0 20px;
+            margin-right: -90px;
+            border-top: 1px solid #F0F0F0;
+
+            .entry h3 {
+                padding-right: 70px;
+            }
+
+            > p, .entry:first-child {
+                padding-top: 20px;
+            }
+            > p, .entry:last-child {
+                padding-bottom: 20px;
+                hr {
+                    display: none;
+                }
+            }
+        }
+
         input {
             height: 50px;
             line-height: 50px;

@@ -13,7 +13,12 @@
         </a>
     </section>
     <section id="search">
-        <div id="panel"><input type="text" id="global_search" /></div>
+        <div id="panel">
+            <form method="get" action="{$search_base}">
+                <input type="text" data-base="{$search_base}" autocomplete="off" name="search_field" id="search_field" />
+            </form>
+            <div class="results"></div>
+        </div>
         <div id="icon"></div>
     </section>
     <section id="nav-bar">

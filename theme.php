@@ -60,6 +60,8 @@ class RobertodonettaTheme extends Theme {
     }
 
     public function globals() {
+        $searchView = App::instance()->vm->getViewByName('search');
+
         return [
             'logo' => $this->url().'images/logo.svg',
             'home_url' => Utils::getHomeUrl(),
@@ -70,6 +72,7 @@ class RobertodonettaTheme extends Theme {
             'footer_webdesign' => Settings::get('rodo-footer-webdesign-'.Localization::getCurrentLanguage()),
             'footer_navigation' => ContentNavigation::getNavigationList('footer-nav'),
             'lang_selection' => Localization::getLanguageSelection(),
+            'search_base' => $searchView->buildURL()
         ];
     }
 
