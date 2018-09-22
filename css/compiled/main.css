@@ -79,6 +79,13 @@ a:focus {
   color: #d74444;
   text-decoration: none;
 }
+dl dt {
+  margin-bottom: 3px;
+  opacity: 0.7;
+}
+dl dd {
+  margin-bottom: 10px;
+}
 .row {
   padding: 0 0 100px 0;
 }

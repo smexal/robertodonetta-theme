@@ -90,6 +90,7 @@ class RobertodonettaTheme extends Theme {
         $this->addStyle($this->directory()."css/reset.less");
         $this->addStyle($this->directory()."css/animations.less");
         $this->addStyle($this->directory()."css/main.less");
+        $this->addStyle($this->directory()."css/overlay.less");
         $this->addStyle($this->directory()."css/header.less");
         $this->addStyle($this->directory()."css/footer.less");
 
@@ -114,6 +115,7 @@ class RobertodonettaTheme extends Theme {
         $this->addScript(CORE_WWW_ROOT."ressources/scripts/helpers.js", true);
 
         $this->addScript($this->url(). '/scripts/navigation.js', true);
+        $this->addScript($this->url(). '/scripts/overlay.js', true);
     }
 
     public function customHeader() {
