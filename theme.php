@@ -99,14 +99,15 @@ class RobertodonettaTheme extends Theme {
         $this->addStyle('//fonts.googleapis.com/css?family=Roboto:700', true);
 
         // blocks
-        $this->addStyle($this->directory()."css/blocks/arrow.less");
-        $this->addStyle($this->directory()."css/blocks/button.less");
-        $this->addStyle($this->directory()."css/blocks/bigteaser.less");
-        $this->addStyle($this->directory()."css/blocks/smallteaser.less");
-        $this->addStyle($this->directory()."css/blocks/longtext.less");
-        $this->addStyle($this->directory()."css/blocks/forms.less");
-        $this->addStyle($this->directory()."css/blocks/listings.less");
-        $this->addStyle($this->directory()."css/blocks/collection.less");
+        $this->addStyle($this->directory()."css/blocks/rd_arrow.less");
+        $this->addStyle($this->directory()."css/blocks/rd_button.less");
+        $this->addStyle($this->directory()."css/blocks/rd_bigteaser.less");
+        $this->addStyle($this->directory()."css/blocks/rd_smallteaser.less");
+        $this->addStyle($this->directory()."css/blocks/rd_longtext.less");
+        $this->addStyle($this->directory()."css/blocks/rd_forms.less");
+        $this->addStyle($this->directory()."css/blocks/rd_listings.less");
+        $this->addStyle($this->directory()."css/blocks/rd_collection.less");
+        $this->addStyle($this->directory()."css/blocks/rd_components.less");
     }
 
     public function scripts() {
