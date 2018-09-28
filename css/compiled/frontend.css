@@ -2,10 +2,30 @@
   position: relative;
 }
 #archive-database .table-editbar {
-  width: 30%;
-  position: absolute;
-  top: 0;
-  right: 100px;
+  background-color: #FFF;
+  border: 1px solid #F0F0F0;
+  display: flex;
+  justify-content: space-between;
+}
+#archive-database .table-editbar .left,
+#archive-database .table-editbar .right {
+  max-width: 50%;
+}
+#archive-database .table-editbar .left .form-group,
+#archive-database .table-editbar .right .form-group {
+  margin-bottom: 0;
+}
+#archive-database .table-editbar .left .form-group label,
+#archive-database .table-editbar .right .form-group label {
+  padding-right: 10px;
+}
+#archive-database .table-editbar .left .form-group input,
+#archive-database .table-editbar .right .form-group input {
+  box-shadow: none;
+}
+#archive-database .table-editbar .left .form-group input:focus,
+#archive-database .table-editbar .right .form-group input:focus {
+  border: 1px solid #333;
 }
 #archive-database .grid {
   margin-top: 60px;
@@ -13,6 +33,7 @@
 #archive-database .grid .grid-element {
   max-width: 275px;
   margin: 0 20px 20px 0;
+  cursor: pointer;
   background-color: white;
 }
 #archive-database .grid .grid-element:nth-child(4n) {
