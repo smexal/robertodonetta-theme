@@ -11,7 +11,8 @@ body {
   min-height: 100%;
   color: #222222;
 }
-body .wrapped {
+body .wrapped,
+body .wrapper {
   max-width: 1180px;
   margin: 0 auto;
 }
@@ -87,7 +88,7 @@ dl dd {
   margin-bottom: 10px;
 }
 .row {
-  padding: 0 0 100px 0;
+  padding: 0 0 40px 0;
 }
 .text-content {
   max-width: 768px;

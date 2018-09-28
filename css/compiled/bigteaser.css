@@ -1,26 +1,9 @@
-.big-teaser {
-  position: relative;
-  margin-bottom: 180px;
-  padding-top: 180px;
+img {
+  max-width: 100%;
 }
-.big-teaser .background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
+.forge-news-teaser-big {
+  margin-top: 70px;
 }
-.big-teaser .text-block {
-  background-color: white;
-  padding: 60px;
-  width: 65%;
-  max-width: 670px;
-  position: relative;
-  z-index: 4;
-  bottom: -80px;
-  margin-left: 15px;
-}
-.big-teaser .text-block h2 {
-  margin-top: 0;
+.forge-news-teaser-big img {
+  float: right;
 }

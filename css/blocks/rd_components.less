@@ -1,0 +1,25 @@
+.news-teaser {
+    .blocks > div {
+        display: flex;
+        justify-content: space-between;
+
+        .block {
+            width: 23%;
+            transition: 200ms;
+
+            &:hover {
+                h3 {
+                    color: @color-brand;
+                }
+            }
+
+            .date {
+                color: @color-grey-medium;
+            }
+
+            h3 {
+                margin-top: 5px;
+            }
+        }
+    }
+}

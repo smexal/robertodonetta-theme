@@ -32,6 +32,11 @@
   border-radius: 2px;
   cursor: pointer;
 }
+.seatplan .cell i.material-icons,
+.seatplan .name i.material-icons {
+  color: white;
+  font-size: 18px;
+}
 .seatplan .cell:hover,
 .seatplan .name:hover {
   border-color: #eaeaea;
@@ -57,6 +62,15 @@
   background-color: #FFC107;
   border-color: #FF8F00;
 }
+.seatplan .cell.sold.mine,
+.seatplan .name.sold.mine {
+  background-color: #FFA726;
+  border-color: #FFB74D;
+}
+.seatplan .cell.sold.mine:hover,
+.seatplan .name.sold.mine:hover {
+  background-color: #FFB74D;
+}
 .seatplan .name {
   font-size: 11px;
   line-height: 21px;
@@ -76,6 +90,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.schedule-block {
+  display: flex;
+}
+.schedule-block .time {
+  min-width: 70px;
+  width: 15%;
+}
+.schedule-block .entry {
+  width: 80%;
 }
 .step-buy table tr td:last-child,
 .step-buy table tr th:last-child {
@@ -113,14 +137,19 @@
   margin-top: 30px;
   margin-bottom: 60px;
 }
-.step-seat ul li {
+.step-seat .buyed-seats ul,
+.step-seat .buyed-seats li {
+  list-style-type: none;
+  padding-left: 0;
+}
+.step-seat .buyed-seats ul li {
   height: 30px;
   background-color: rgba(255,255,255,0.1);
   line-height: 30px;
   padding-bottom: 10px;
   margin-bottom: 5px;
 }
-.step-seat ul li input {
+.step-seat .buyed-seats ul li input {
   margin-right: 10px;
   margin-left: 10px;
   position: relative;
@@ -140,4 +169,33 @@
 #map_canvas {
   width: 100%;
   min-height: 480px;
+}
+.checkin .status {
+  background-color: #42A5F5;
+  padding: 80px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 32px;
+}
+.checkin .status span {
+  display: block;
+}
+.checkin .status span.additional {
+  font-size: 24px;
+}
+.checkin .status span small {
+  opacity: 0.7;
+}
+.checkin .status.success {
+  color: white;
+  background-color: #689F38;
+}
+.checkin .status.error {
+  color: white;
+  background-color: #D32F2F;
+}
+.checkin .status.warning {
+  color: #333;
+  background-color: #FFEB3B;
 }
