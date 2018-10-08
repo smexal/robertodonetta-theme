@@ -11,6 +11,9 @@ use \Forge\Core\Classes\Localization;
 use \Forge\Core\Classes\Settings;
 use \Forge\Core\Classes\Utils;
 
+
+
+
 class RobertodonettaTheme extends Theme {
     public $lessVariables = [
         'color-brand' => '#D32F2F', //'#D32F2F',
@@ -65,6 +68,7 @@ class RobertodonettaTheme extends Theme {
         return [
             'logo' => $this->url().'images/logo.svg',
             'home_url' => Utils::getHomeUrl(),
+            'shopping_cart' => \Forge\Modules\ForgeShoppingcart\Cart::trigger(),
             'main_title' => Settings::get('rodo-main-title-'.Localization::getCurrentLanguage()),
             'primary_navigation' => ContentNavigation::getNavigationList('primary-nav'),
             'secondary_navigation' => ContentNavigation::getNavigationList('secondary-nav'),

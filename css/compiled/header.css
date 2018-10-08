@@ -77,7 +77,7 @@
 section#search {
   position: fixed;
   top: 0;
-  right: 0;
+  right: 90px;
   height: 70px;
   width: 90px;
   background-color: white;
@@ -97,7 +97,8 @@ section#search #panel {
   position: absolute;
   width: 290px;
   transition: 200ms;
-  right: -290px;
+  right: -360px;
+  top: -1px;
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.21);
 }
 section#search #panel .results {
@@ -153,6 +154,16 @@ section#search #icon:before {
   bottom: -5px;
   left: -2px;
   transform: rotate(45deg);
+}
+header .cart-trigger {
+  position: fixed;
+  right: 0;
+  z-index: 40;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.21);
+  width: 90px;
+}
+header .cart-trigger svg {
+  fill: #8c8c8c;
 }
 body.nav-open #nav-overlay {
   display: block;
