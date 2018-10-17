@@ -102,3 +102,19 @@ dl dd {
 body > .content > div:first-child.wrapped {
   padding-top: 140px;
 }
+.forge-events h1 {
+  padding-top: 70px;
+}
+.forge-events .intro-infos {
+  padding-top: 0;
+}
+.forge-events .facts-block {
+  margin-bottom: 10px;
+}
+.forge-events .facts-block span {
+  display: block;
+  margin-bottom: 3px;
+}
+.forge-events .facts-block span.before {
+  opacity: 0.5;
+}
