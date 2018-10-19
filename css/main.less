@@ -44,6 +44,22 @@ p, p.alternative, p.lead {
     }
 }
 
+a.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+button.add-to-cart {
+    background-color: #FFF;
+    border: 1px solid #999;
+    border-radius: 60px;
+    transition: 200ms;
+
+    &:hover {
+        border-color: @color-brand;
+    }
+}
+
 .results {
     margin-top: 40px;
 }
