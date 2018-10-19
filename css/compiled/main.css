@@ -43,6 +43,20 @@ p.lead {
   color: rgba(0,0,13,0.6);
   line-height: 1.5em;
 }
+a.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+button.add-to-cart {
+  background-color: #FFF;
+  border: 1px solid #999;
+  border-radius: 60px;
+  transition: 200ms;
+}
+button.add-to-cart:hover {
+  border-color: #D32F2F;
+}
 .results {
   margin-top: 40px;
 }
