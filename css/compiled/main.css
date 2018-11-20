@@ -33,6 +33,9 @@ p.alternative,
 p.lead {
   color: rgba(0,0,13,0.6);
 }
+.wrapper h2 {
+  padding: 0 20px;
+}
 .news-teaser .blocks {
   padding: 0 15px;
 }
