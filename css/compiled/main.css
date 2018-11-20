@@ -142,3 +142,12 @@ body > .content > div:first-child.wrapped {
 .forge-events .facts-block span.before {
   opacity: 0.5;
 }
+#archive-database .table-editbar {
+  padding: 10px;
+}
+#archive-database .table-editbar .left {
+  display: none;
+}
+#archive-database .control-label {
+  margin-right: 20px;
+}

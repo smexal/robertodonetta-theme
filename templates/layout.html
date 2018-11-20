@@ -12,6 +12,11 @@
                 <span class="icon"></span>
             </a>
         </section>
+        {if="$curTitle"}
+        <div class="cur-section">
+            <span>{$curTitle}</span>
+        </div>
+        {/if}
         {$shopping_cart}
         <section id="search">
             <div id="panel">

@@ -1,11 +1,28 @@
 #archive-database {
   position: relative;
 }
+#archive-database .adb-advanced-search {
+  display: none;
+  padding: 40px;
+  width: 100%;
+}
+#archive-database .adb-advanced-search .form-group {
+  width: 30%;
+  margin-right: 40px;
+  float: left;
+}
+#archive-database .adb-advanced-search .form-group label {
+  width: 120px;
+}
 #archive-database .table-editbar {
   background-color: #FFF;
   border: 1px solid #F0F0F0;
   display: flex;
   justify-content: space-between;
+}
+#archive-database .table-editbar .right {
+  max-width: 100% !important;
+  width: 100%;
 }
 #archive-database .table-editbar .left,
 #archive-database .table-editbar .right {
@@ -14,6 +31,7 @@
 #archive-database .table-editbar .left .form-group,
 #archive-database .table-editbar .right .form-group {
   margin-bottom: 0;
+  float: left;
 }
 #archive-database .table-editbar .left .form-group label,
 #archive-database .table-editbar .right .form-group label {
@@ -27,12 +45,17 @@
 #archive-database .table-editbar .right .form-group input:focus {
   border: 1px solid #333;
 }
+#archive-database .table-editbar .left .form-group + a,
+#archive-database .table-editbar .right .form-group + a {
+  line-height: 40px;
+  padding-left: 20px;
+}
 #archive-database .grid {
   margin-top: 60px;
 }
 #archive-database .grid .grid-element {
-  max-width: 275px;
-  margin: 0 20px 20px 0;
+  max-width: 260px;
+  margin: 0 10px 20px 0;
   cursor: pointer;
   background-color: white;
 }
