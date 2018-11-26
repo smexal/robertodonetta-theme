@@ -7,12 +7,13 @@
   width: 100%;
 }
 #archive-database .adb-advanced-search .form-group {
-  width: 30%;
+  width: 45%;
   margin-right: 40px;
   float: left;
+  margin-bottom: 20px !important;
 }
 #archive-database .adb-advanced-search .form-group label {
-  width: 120px;
+  min-width: 140px;
 }
 #archive-database .table-editbar {
   background-color: #FFF;

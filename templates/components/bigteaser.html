@@ -1,5 +1,6 @@
 <div class="big-teaser">
     <div class="wrapped">
+        {if="strlen($title) > 0"}
         <section class="text-block">
             <h2>{$title}</h2>
             {if="$lead"}<p class="lead">{$lead}</p>{/if}
@@ -7,6 +8,7 @@
             {if="$btn_text_one"}<a class="btn btn-discreet" href="{$btn_url_one}">{$btn_text_one}</a>{/if}
             {if="$btn_text_two"}<a class="btn btn-discreet" href="{$btn_url_two}">{$btn_text_two}</a>{/if}
         </section>
+        {/if}
     </div>
     <div class="background" style="background-image:url({$image});"></div>
 </div>
