@@ -29,7 +29,7 @@ class DocumentationCollection extends DataCollection {
         return App::instance()->render(App::instance()->tm->theme->directory()."templates/collections", 'documentation', [
             'title' => $item->getMeta('title'),
             'description' => $item->getMeta('description'),
-            'text' => $item->getMeta('text'),
+            'text' => $item->getMeta('main_text'),
         ]);
     }
 
