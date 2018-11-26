@@ -51,6 +51,7 @@ class DoculistingComponent extends ListingComponent {
             'title' => $item->getMeta('title'),
             'description' => $item->getMeta('description'),
             'image' => $image ? $image->getSizedImage(120, 80) : false,
+            'detailLink' => $item->url()
         ));
     }
 }

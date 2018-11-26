@@ -26,7 +26,11 @@ class DocumentationCollection extends DataCollection {
     }
 
     public function render($item) {
-        return;
+        return App::instance()->render(App::instance()->tm->theme->directory()."templates/collections", 'documentation', [
+            'title' => $item->getMeta('title'),
+            'description' => $item->getMeta('description'),
+            'text' => $item->getMeta('text'),
+        ]);
     }
 
     private function custom_fields() {
