@@ -30,7 +30,18 @@ class DocumentationCollection extends DataCollection {
     }
 
     private function custom_fields() {
-        return;
+        $this->addFields(
+        [
+            [
+                'key' => 'main_text',
+                'label' => i('Text', 'forge-events'),
+                'multilang' => true,
+                'type' => 'wysiwyg',
+                'order' => 30,
+                'position' => 'left',
+                'hint' => ''
+            ],  
+        ]);
     }
 }
 
