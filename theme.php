@@ -66,7 +66,7 @@ class RobertodonettaTheme extends Theme {
         $searchView = App::instance()->vm->getViewByName('search');
 
         $curTitle = false;
-        if(count(Utils::getUriComponents()) > 1) {
+        if(count(Utils::getUriComponents()) > 1 && App::instance()->page) {
             $curTitle = App::instance()->page->getMeta('title');
         }
 
