@@ -6,6 +6,7 @@ use Forge\Core\App\App;
 use Forge\Core\App\ModifyHandler;
 use Forge\Core\Components\ListingComponent;
 use Forge\Core\Classes\Media;
+use Forge\Core\Classes\Localization;
 
 
 class DoculistingComponent extends ListingComponent {
@@ -14,6 +15,8 @@ class DoculistingComponent extends ListingComponent {
     protected $oderDirection = 'DESC';
 
     public function prefs() {
+        ModifyHandler::instance()->add('modify_collection_listing_items', [$this, 'modifyFilterListingItems']);
+
         $this->settings = [
             [
                 "label" => i('Title', 'forge-events'),
@@ -36,6 +39,46 @@ class DoculistingComponent extends ListingComponent {
             'level' => 'inner',
             'container' => false
         );
+    }
+
+    public function modifyFilterListingItems($items) {
+        $filtered = [];
+        // nothing to filter...
+        if(! array_key_exists('f', $_GET) || $_GET['f'] == 0 ) {
+            return $items;
+        }
+
+        foreach($items as $item) {
+            $categories = $item->getMeta('categories');
+            if(! is_array($categories)) {
+                continue;
+            }
+            if(in_array($_GET['f'], $categories)) {
+                $filtered[] = $item;
+            }
+        }
+
+        return $filtered;
+    }
+
+    public function getFilter() {
+        $collection = App::instance()->cm->getCollection('rdon-documentation');
+        $categories = $collection->getCategories();
+        $lang = Localization::getCurrentLanguage();
+        $add = '';
+        if(! array_key_exists('f', $_GET) || $_GET['f'] == 0) {
+            $add = 'class="active"';
+        }
+        $return = '<a href="?f=0" '.$add.'>'.i('Show all', 'rodo-theme.').'</a>';
+        foreach($categories as $cat) {
+            $catMeta = json_decode($cat['meta']);
+            $addClass = '';
+            if(array_key_exists('f', $_GET) && $_GET['f'] == $cat['id']) {
+                $addClass= 'active';
+            }
+            $return.='<a href="?f='.$cat['id'].'" class="'.$addClass.'">'.$catMeta->$lang->name.'</a>';
+        }
+        return $return;
     }
 
     public function renderItem($item) {

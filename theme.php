@@ -103,6 +103,7 @@ class RobertodonettaTheme extends Theme {
         $this->addStyle($this->directory()."css/overlay.less");
         $this->addStyle($this->directory()."css/header.less");
         $this->addStyle($this->directory()."css/footer.less");
+        $this->addStyle($this->directory()."css/responsive.less");
 
         // externals
         $this->addStyle("//fonts.googleapis.com/css?family=Lora:400,400i,700,700i", true);

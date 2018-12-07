@@ -163,3 +163,16 @@ body > .content > div:first-child.wrapped {
 #archive-database .control-label {
   margin-right: 20px;
 }
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.filter a {
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+.filter a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
