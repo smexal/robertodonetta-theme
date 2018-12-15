@@ -62,6 +62,21 @@ class BigteaserComponent extends Component {
                 "chosen" => true
             ],
             [
+                "label" => i('Third Button Text', 'rodo-theme'),
+                "hint" => '',
+                "key" => "third_button_text",
+                "type" => "text"
+            ],
+            [
+                "label" => i('Third Button Link', 'rodo-theme'),
+                "hint" => '',
+                "key" => "third_button_link",
+                "type" => "select",
+                "values" => ContentNavigation::getPossibleItems(),
+                "grouped" => true,
+                "chosen" => true
+            ],
+            [
                 "label" => i('Big Image', 'rodo-theme'),
                 "hint" => '',
                 "key" => "image",
@@ -89,6 +104,8 @@ class BigteaserComponent extends Component {
             'btn_url_one' => ContentNavigation::parseHashUrl($this->getField('main_button_link')),
             'btn_text_two' => $this->getField('secondary_button_text'),
             'btn_url_two' => ContentNavigation::parseHashUrl($this->getField('secondary_button_link')),
+            'btn_text_three' => $this->getField('third_button_text'),
+            'btn_url_three' => ContentNavigation::parseHashUrl($this->getField('third_button_link')),
             'image' => $image
         ]);
     }
