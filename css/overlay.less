@@ -3,11 +3,13 @@ body > .overlay {
     width: 70%;
     background-color: white;
     padding: 40px;
-    position: absolute;
+    position: fixed;
     left: 15%;
     z-index: 100;
     transition: 200ms;
     box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.2);
+    max-height: 85%;
+    overflow: auto;
 
     .content {
       padding-right: 50px;
