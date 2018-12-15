@@ -30,6 +30,7 @@ class DocumentationCollection extends DataCollection {
             'title' => $item->getMeta('title'),
             'description' => $item->getMeta('description'),
             'text' => $item->getMeta('main_text'),
+            'custom_html' => $item->getMeta('custom_html')
         ]);
     }
 
@@ -38,13 +39,22 @@ class DocumentationCollection extends DataCollection {
         [
             [
                 'key' => 'main_text',
-                'label' => i('Text', 'forge-events'),
+                'label' => i('Text', 'rodo-theme'),
                 'multilang' => true,
                 'type' => 'wysiwyg',
                 'order' => 30,
                 'position' => 'left',
                 'hint' => ''
-            ],  
+            ],
+            [
+                'key' => 'custom_html',
+                'label' => i('Custom HTML', 'rodo-theme'),
+                'multilang' => true,
+                'type' => 'textarea',
+                'order' => 31,
+                'position' => 'left',
+                'hint' => ''
+            ],
         ]);
     }
 }
