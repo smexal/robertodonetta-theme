@@ -19,6 +19,10 @@ body > .overlay {
       }
     }
 
+    #detail-image-zapper {
+      display: none;
+    }
+
     .close {
         display: block;
         position: absolute;
@@ -62,6 +66,10 @@ body > .overlay {
 
     &.visible {
         top: 2%;
+
+        #detail-image-zapper {
+          display: block;
+        }
 
         + .overlay-cover {
             width: 100%;

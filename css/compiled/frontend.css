@@ -53,11 +53,19 @@
 }
 #archive-database .grid {
   margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: auto !important;
 }
 #archive-database .grid .grid-element {
   max-width: 260px;
+  min-width: 260px;
   margin: 0 10px 20px 0;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: white;
 }
 #archive-database .grid .grid-element:nth-child(4n) {
@@ -79,4 +87,46 @@
   color: #222222;
   font-size: 1.225em;
   line-height: 1.5em;
+}
+.detail-image.row {
+  padding-top: 40px;
+}
+.zapper {
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 90%;
+  left: 5%;
+  justify-content: space-between;
+}
+.zapper .next,
+.zapper .prev {
+  position: absolute;
+  margin-top: 140px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.zapper .next:before,
+.zapper .next:after,
+.zapper .prev:before,
+.zapper .prev:after {
+  position: absolute;
+  height: 2px;
+  background-color: #222222;
+  width: 100%;
+  content: '';
+  transform: rotate(45deg);
+  top: 0px;
+}
+.zapper .next:after,
+.zapper .prev:after {
+  transform: rotate(-45deg);
+  top: 22px;
+}
+.zapper .next {
+  right: 0;
+}
+.zapper .prev {
+  transform: rotate(-180deg);
 }

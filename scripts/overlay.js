@@ -24,7 +24,6 @@ var rdon_overlay = {
             method: 'GET',
             url: req
         }).done(function(data) {
-            console.log(data);
             $("body > .overlay .content").html(data.content);
             rdon_overlay.stopLoading();
         });
