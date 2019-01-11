@@ -9,6 +9,8 @@
                     <p class="lead"><?php echo $description;?></p>
                     <?php echo $text;?>
 
+                    <?php echo $custom_html;?>
+
                 </div>
             </div>
         </div>
