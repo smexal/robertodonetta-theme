@@ -121,6 +121,8 @@ section#search #panel .results {
   padding: 0 20px 0 20px;
   margin-right: -90px;
   border-top: 1px solid #F0F0F0;
+  overflow: auto;
+  max-height: 600px;
 }
 section#search #panel .results .entry h3 {
   padding-right: 70px;

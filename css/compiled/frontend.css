@@ -57,6 +57,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   height: auto !important;
+  align-items: flex-start;
 }
 #archive-database .grid .grid-element {
   max-width: 260px;
