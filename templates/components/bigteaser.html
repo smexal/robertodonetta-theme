@@ -1,7 +1,10 @@
 <div class="big-teaser">
+    <div class="background" style="background-image:url({$image});"></div>
+</div>
+<div class="row">
     <div class="wrapped">
         {if="strlen($title) > 0"}
-        <section class="text-block">
+        <section class="big-teaser-text-block">
             <h2>{$title}</h2>
             {if="$lead"}<p class="lead">{$lead}</p>{/if}
             {if="$text"}{$text}{/if}
@@ -11,5 +14,4 @@
         </section>
         {/if}
     </div>
-    <div class="background" style="background-image:url({$image});"></div>
 </div>

@@ -75,12 +75,6 @@ class BigteaserComponent extends Component {
                 "values" => ContentNavigation::getPossibleItems(),
                 "grouped" => true,
                 "chosen" => true
-            ],
-            [
-                "label" => i('Big Image', 'rodo-theme'),
-                "hint" => '',
-                "key" => "image",
-                "type" => "image"
             ]
         ];
         return array(
@@ -93,8 +87,22 @@ class BigteaserComponent extends Component {
         );
     }
     public function content() {
-        $image = new Media($this->getField('image'));
-        $image = $image->getUrl(true);
+
+        // get image random...
+        $image = false;
+
+        // get all header files
+        $header_dir = 'themes/robertodonetta/header-images/';
+        $dir = DOC_ROOT.$header_dir;
+        $header_files = scandir($dir, 1);
+
+        // remove "." and ".." from array
+        array_pop($header_files);
+        array_pop($header_files);
+
+        $id = rand(0,count($header_files)-1);
+        $image = WWW_ROOT.$header_dir.$header_files[$id];
+
 
         return App::instance()->render(App::instance()->tm->theme->directory()."templates/components/", "bigteaser", [
             'title' => $this->getField('title'),
