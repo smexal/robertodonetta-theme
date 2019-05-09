@@ -12,7 +12,7 @@ use Forge\Core\Classes\Localization;
 class DoculistingComponent extends ListingComponent {
     protected $collection = 'rdon-documentation';
     protected $order = 'created';
-    protected $oderDirection = 'ASC';
+    protected $orderDirection = 'DESC';
 
     public function prefs() {
         ModifyHandler::instance()->add('modify_collection_listing_items', [$this, 'modifyFilterListingItems']);
