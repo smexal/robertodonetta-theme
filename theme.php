@@ -82,7 +82,8 @@ class RobertodonettaTheme extends Theme {
             'footer_navigation' => ContentNavigation::getNavigationList('footer-nav'),
             'lang_selection' => Localization::getLanguageSelection(),
             'search_base' => $searchView->buildURL(),
-            'curTitle' => $curTitle
+            'curTitle' => $curTitle,
+            'fb_image' => Utils::getHomeUrl().'themes/robertodonetta/images/facebook.svg'
         ];
     }
 

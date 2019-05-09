@@ -32,6 +32,11 @@ h3 {
   color: #222222;
   font-weight: 400;
 }
+.footer-fb-logo {
+  position: absolute;
+  top: -60px;
+  width: 24px;
+}
 p,
 p.alternative,
 p.lead {
